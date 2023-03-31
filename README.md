@@ -34,7 +34,7 @@ La arquitectura hexagonal permite una mayor modularidad y facilita la prueba y e
 ## Instalación y ejecución
 
 ```bash
-Clonar el repositorio: git clone https://github.com/usuario/repo.git 
+Clonar el repositorio: git clone https://github.com/luisorduz/restful-api-auth-users
 Navegar al directorio del proyecto: cd proyecto
 Compilar el proyecto: mvn clean install
 Ejecutar el proyecto Opción 1: mvn spring-boot:run
