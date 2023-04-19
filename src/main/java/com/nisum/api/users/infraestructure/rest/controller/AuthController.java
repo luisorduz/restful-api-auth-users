@@ -44,7 +44,12 @@ public class AuthController {
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
         try {
-
+            /*
+            * tiene un DaoAuthenticationProvider(con la ayuda de UserDetailsService& PasswordEncoder)
+            * para validar UsernamePasswordAuthenticationTokenel objeto.
+            * Si tiene éxito, AuthenticationManager devuelve un objeto de autenticación completo
+            * (incluidas las autorizaciones otorgadas).
+            * */
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
 

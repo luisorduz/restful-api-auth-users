@@ -9,6 +9,8 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class UserDetailsImpl implements UserDetails {
+
+
     private static final long serialVersionUID = 1L;
 
     private UUID id;
@@ -24,7 +26,10 @@ public class UserDetailsImpl implements UserDetails {
         this.email = email;
         this.password = password;
     }
-
+    /*
+     * contiene la información necesaria (como: nombre de usuario, contraseña, autoridades)
+     * para construir un objeto de autenticación.
+     * */
     public static UserDetailsImpl build(User user) {
 
         return new UserDetailsImpl(

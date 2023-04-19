@@ -25,7 +25,11 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     private UserDetailsServiceImpl userDetailsService;
 
     private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
-
+    /*
+    * realiza una única ejecución por cada petición a nuestra API.
+    * analiza y validan el JWT, cargando los detalles del usuario (usando UserDetailsService),
+    * verificando la autorización (usando UsernamePasswordAuthenticationToken).
+    * */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {

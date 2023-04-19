@@ -12,6 +12,11 @@ import java.util.Date;
 
 @Component
 public class JwtUtils {
+
+    /*
+    * proporciona métodos para generar, analizar y validar JWT
+    *
+     */
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
     @Value("${nisum.app.jwtSecret}")

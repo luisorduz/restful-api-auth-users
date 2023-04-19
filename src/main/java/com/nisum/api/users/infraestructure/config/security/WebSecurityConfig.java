@@ -59,6 +59,10 @@ public class WebSecurityConfig {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
+    /*
+    *  Configura cors, csrf, gestión de sesiones, reglas para recursos protegidos.
+    *
+    * */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
